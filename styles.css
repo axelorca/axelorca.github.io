@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('fonts/Nunito/Nunito-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('fonts/Nunito/static/Nunito-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+bb {
+    font-weight: 900;
+    font-family: 'Nunito-Black';
+}
+
+
+body {
+    background: #062a1e; /* or any color you prefer */
+    color: #ffffff;
+
+    font-family: 'Nunito';
+    font-size: 20px;
+
+    margin: 15px;
+}
+
+/*
+TEXTBOX
+*/
+
+.page-content {
+    margin-top: 85px; /* slightly more than topbar height for spacing */
+}
+
+
+.textbox {
+    display: block;
+
+    background: #005034;     
+    border: 2px solid #00b68b;
+    border-radius: 10px;
+
+    padding: 10px 15px;          
+    object-fit: contain;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.textbox .textbox {
+    margin: 10px 0px;
+    background: #002e1d;
+    border: 0px;
+}
+
+.textbox a {
+    color: #00ffc3;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.textbox a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.image-container {
+    margin: 20px auto;
+    display: flex;
+
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.image-container img {
+    min-width: 0;
+    min-height: 0;
+    
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+    margin: 0 5px;
+
+    border-radius: 10px;
+}
+
+/*
+TOP BAR
+*/
+
+
+
+/*
+WEBKIT SCROLLBAR
+*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: #11452f;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #11452f;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #03fc94;
+    border: 2px solid #11452f;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ===== THIN SCROLLBAR VARIANT ===== */
+.thin-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background: #11452f;
+    border-radius: 10px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #00a661;
+    border-radius: 10px;
+    border: 1px solid #11452f;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #00a661;
+}
+
+/* Firefox support */
+.thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #00a661 #11452f;
+}

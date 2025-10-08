@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">   
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous</title>
+
+    <link rel="icon" href="img/head/h.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="main">
+    <!--TOP BAR-->
+    <div id="topbar-placeholder"></div>
+    <script>
+        fetch('topbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('topbar-placeholder').innerHTML = html;
+            });
+    </script>
+    
+    <div class="page-content">
+        <p class="textbox">
+            Bonjour, je m'appelle yassine.
+            Je suis un <a href="https://www.google.fr/">étudiant à l'ISIMA</a> en 2ème année.
+            <br>
+            <br>
+            Wow!
+        </p>
+        <p class="textbox">
+            Bonjour
+        </p>
+        <p class="textbox">
+            Bonjour
+        </p>
+    </div>
+</body>
+
+</html>

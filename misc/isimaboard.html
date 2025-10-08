@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">   
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isima</title>
+    <link rel="icon" href="/img/head/h.png" type="image/png">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/trello-styles.css">
+</head>
+
+
+<script src="/js/trello.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    loadTrelloBoard("8gxvTuBn", "#board-isima");
+});
+</script>
+
+
+<body id="main">
+    <!--TOP BAR-->
+    <div id="topbar-placeholder"></div>
+    <script>
+        fetch('/topbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('topbar-placeholder').innerHTML = html;
+            });
+    </script>
+    
+    <div class="page-content">
+        <div class="textbox">
+            <div class="textbox">
+                <h2>ISIMA Board</h2>
+                <div id="board-isima" class="tr-column-container"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
