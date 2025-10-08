@@ -1,0 +1,8 @@
+.footer{
+    font-family: 'Nunito-Black';
+
+    background: #004421;
+    color: #00ff95;
+    z-index: 1000;
+    height: 60px;
+}

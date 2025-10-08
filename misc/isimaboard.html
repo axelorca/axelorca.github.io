@@ -11,34 +11,27 @@
 </head>
 
 
+
+<script src="/js/include.js"></script>
 <script src="/js/trello.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    loadTrelloBoard("8gxvTuBn", "#board-isima");
-});
-</script>
 
 
+<div data-include="/topbar.html"></div>
 <body id="main">
-    <!--TOP BAR-->
-    <div id="topbar-placeholder"></div>
-    <script>
-        fetch('/topbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('topbar-placeholder').innerHTML = html;
-            });
-    </script>
     
     <div class="page-content">
         <div class="textbox">
             <div class="textbox">
                 <h2>ISIMA Board</h2>
-                <div id="board-isima" class="tr-column-container"></div>
+                <div id="board-isima" 
+                class="tr-column-container" 
+                data-trello-board="8gxvTuBn">
+                </div>
             </div>
         </div>
     </div>
 
 </body>
+<div data-include="/footer.html"></div>
 
 </html>

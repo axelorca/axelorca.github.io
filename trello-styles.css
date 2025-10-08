@@ -67,10 +67,19 @@
     background-color: #004233;
 }
 
+.tr-card  h4{
+    font-family: 'Nunito-Black', sans-serif;
+    color: #00ffc3;
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+
 .tr-card-labels {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+
+    margin-bottom: 8px;
 }
 
 .tr-card-label {
