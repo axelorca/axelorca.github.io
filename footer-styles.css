@@ -6,3 +6,59 @@
     z-index: 1000;
     height: 60px;
 }
+
+.footer ul {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    height: 100%;
+    overflow: visible;
+    position: static; /* Add this line */
+}
+
+.footer li {
+    flex: 1 1 0;
+    min-width: 0;
+
+    text-align: center;
+    padding: 5px;
+    height: 80%;
+
+    position: relative; /* Add this */
+    overflow: visible;  /* Add this */
+}
+
+.footer img {
+    flex: 0 0 10%;
+    height: 80px;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+.footer a {
+    color: #00ffc3;
+    text-decoration: none;
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: color 0.3s, background-color 0.3s ease-in-out;
+
+    background-color: rgb(0, 27, 17);
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
