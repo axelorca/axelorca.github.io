@@ -107,3 +107,11 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.dropdown.open .dropdown-content {
+  height: 50px;
+}
+
+.dropdown.open > a {
+  pointer-events: all;
+}
