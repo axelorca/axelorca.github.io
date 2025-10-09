@@ -39,10 +39,13 @@
     overflow: visible;  /* Add this */
 }
 
-.topbar img {
+.topbar img[class="main-icon"] {
+    display: flex;
+
     flex: 0 0 10%;
     height: 80px;
     margin: 0 10px;
+
     object-fit: contain;
 }
 
