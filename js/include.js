@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const hasFooter = document.querySelector('[data-include="/footer.html"]');
 
         if (!hasTopbar) {
+            console.log("Hello");
             const topbar = document.createElement("div");
             topbar.setAttribute("data-include", "/topbar.html");
             pageContent.parentNode.insertBefore(topbar, pageContent);
         }
 
         if (!hasFooter) {
+            console.log("Hello");
             const footer = document.createElement("div");
             footer.setAttribute("data-include", "/footer.html");
             pageContent.parentNode.insertBefore(footer, pageContent.nextSibling);
