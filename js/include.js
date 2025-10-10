@@ -48,4 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
         refreshBoard();
         setInterval(refreshBoard, 5000);
     }
+
 });
