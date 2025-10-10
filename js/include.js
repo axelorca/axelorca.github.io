@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(import.meta.env.VITE_API_URL);
-
     // 1. Automatically insert topbar and footer around .page-content
     const pageContents = document.querySelectorAll(".page-content");
     pageContents.forEach(pageContent => {
@@ -53,4 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(refreshBoard, 5000);
     }
 
+    console.log(import.meta.env.FORMS_WEBHOOK);
 });
