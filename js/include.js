@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("1");
+
     // 1. Automatically insert topbar and footer around .page-content
     const pageContents = document.querySelectorAll(".page-content");
     pageContents.forEach(pageContent => {
