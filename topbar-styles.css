@@ -65,6 +65,8 @@
     height: 100%;
     overflow: hidden;
 
+    gap: 5px;
+
     line-height: 1;
     
     transition: color 0.3s, background-color 0.3s ease-in-out;
