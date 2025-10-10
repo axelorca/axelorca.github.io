@@ -51,5 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(refreshBoard, 5000);
     }
 
-    console.log(import.meta.env.FORMS_WEBHOOK);
+    console.log(process.env.FORMS_WEBHOOK);
 });
