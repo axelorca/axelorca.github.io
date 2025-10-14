@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!hasTopbar) {
             console.log("Hello");
             const topbar = document.createElement("div");
-            topbar.setAttribute("data-include", "/topbar.html");
+            topbar.setAttribute("data-include", "/header.html");
             pageContent.parentNode.insertBefore(topbar, pageContent);
         }
 
@@ -50,6 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
         refreshBoard();
         setInterval(refreshBoard, 5000);
     }
-
-    console.log(process.env.FORMS_WEBHOOK);
 });
