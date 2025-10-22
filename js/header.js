@@ -5,7 +5,8 @@ const DROPDOWN_CONTENT = document.getElementsByClassName("dropdown-content");
 
 // VARIABLES
 
-let clickedMainButton = null;
+let clickedMainButton = false;
+let hoveredDropdownContent = false;
 
 // METHODS
 
@@ -24,7 +25,7 @@ for(let i = 0; i < MAIN_BUTTONS.length; i++)
     let targetEvent = isMobile() ? "click" : "mouseenter";
 
     MAIN_BUTTONS[i].addEventListener(targetEvent, () => {
-        clickedMainButton = MAIN_BUTTONS[i];
+        clickedMainButton = true;
 
         for(let j = 0; j < MAIN_BUTTONS.length; j++)
         {
@@ -47,6 +48,18 @@ for(let i = 0; i < MAIN_BUTTONS.length; i++)
     if(!isMobile())
     {
         MAIN_BUTTONS[i].addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                if(!hoveredDropdownContent)
+                    DROPDOWN_CONTENT[i].style = "height: 0px";
+            }, 20);
+        })
+
+        DROPDOWN_CONTENT[i].addEventListener("mouseenter", () => {
+            hoveredDropdownContent = true;
+        })
+
+        DROPDOWN_CONTENT[i].addEventListener("mouseleave", () => {
+            hoveredDropdownContent = false;
             DROPDOWN_CONTENT[i].style = "height: 0px";
         })
     }
@@ -64,7 +77,7 @@ if(isMobile())
                     DROPDOWN_CONTENT[i].style = "height: 0px";
                 }
             }
-            clickedMainButton = null;
+            clickedMainButton = false;
         }, 2);
     })
 }
