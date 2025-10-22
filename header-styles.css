@@ -110,9 +110,10 @@
     pointer-events: all;
 }
 
+/*
 .dropdown:hover .dropdown-content {
     height: 50px;
-}
+}*/
 
 .dropdown li {
     padding: 2px 0;

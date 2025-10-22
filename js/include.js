@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const hasFooter = document.querySelector('[data-include="/footer.html"]');
 
         if (!hasTopbar) {
-            console.log("Hello");
             const topbar = document.createElement("div");
             topbar.setAttribute("data-include", "/header.html");
             pageContent.parentNode.insertBefore(topbar, pageContent);
         }
 
         if (!hasFooter) {
-            console.log("Hello");
             const footer = document.createElement("div");
             footer.setAttribute("data-include", "/footer.html");
             pageContent.parentNode.insertBefore(footer, pageContent.nextSibling);
@@ -29,9 +27,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!response.ok) throw new Error(`Can't load ${file}`);
                 return response.text();
             })
-            .then(html => el.innerHTML = html)
+            .then(html => {
+                el.innerHTML = html;
+
+                // 👇 Re-insert <script> tags to execute them
+                el.querySelectorAll('script').forEach(oldScript => {
+                    const newScript = document.createElement('script');
+
+                    // Copy attributes (e.g., src, type)
+                    [...oldScript.attributes].forEach(attr =>
+                        newScript.setAttribute(attr.name, attr.value)
+                    );
+
+                    // Copy inline script content
+                    if (!oldScript.src) {
+                        newScript.textContent = oldScript.textContent;
+                    }
+
+                    // Replace old script with new one to trigger execution
+                    oldScript.replaceWith(newScript);
+                });
+            })
             .catch(err => console.error(err));
     });
+
 
     // 3. Handle Trello board auto-refresh
     const boardElement = document.querySelector("[data-trello-board]");
